@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { projectResolver } from '../../core/resolvers/project-resolver';
 import { projectTasksResolver } from '../../core/resolvers/project-tasks-resolver';
+import { taskResolver } from '../../core/resolvers/task-resolver';
 
 export const PROJECT_ROUTES: Routes = [
   {
@@ -28,6 +29,7 @@ export const PROJECT_ROUTES: Routes = [
       {
         path: 'task/:taskId',
         outlet: 'detail',
+        resolve: { task: taskResolver },
         loadComponent: () => import('./task-detail/task-detail').then((m) => m.TaskDetail),
         title: 'Detalhes da Task',
       },
