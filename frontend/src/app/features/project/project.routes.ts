@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { projectResolver } from '../../core/resolvers/project-resolver';
+import { projectTasksResolver } from '../../core/resolvers/project-tasks-resolver';
 
 export const PROJECT_ROUTES: Routes = [
   {
@@ -9,6 +10,7 @@ export const PROJECT_ROUTES: Routes = [
       { path: '', redirectTo: 'board', pathMatch: 'full' },
       {
         path: 'board',
+        resolve: { tasks: projectTasksResolver },
         loadComponent: () => import('./board/board').then((m) => m.Board),
         title: 'Board',
       },
