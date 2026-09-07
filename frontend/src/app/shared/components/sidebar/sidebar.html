@@ -57,26 +57,28 @@
       Faturamento
     </a>
 
-    <span
-      class="hidden md:block text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 pt-5 pb-1.5"
-      >Admin</span
-    >
-    <a
-      [routerLink]="['/admin', 'users']"
-      routerLinkActive="!bg-indigo-500/20 !text-indigo-300 font-semibold border border-indigo-500/30 shadow-xs"
-      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap"
-    >
-      <span class="text-base w-5 text-center">🔑</span>
-      Usuários
-    </a>
-    <a
-      [routerLink]="['/admin', 'audit-log']"
-      routerLinkActive="!bg-indigo-500/20 !text-indigo-300 font-semibold border border-indigo-500/30 shadow-xs"
-      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap"
-    >
-      <span class="text-base w-5 text-center">📋</span>
-      Audit Log
-    </a>
+    @if (_authManager.isAdmin()) {
+      <span
+        class="hidden md:block text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 pt-5 pb-1.5"
+        >Admin</span
+      >
+      <a
+        [routerLink]="['/admin', 'users']"
+        routerLinkActive="!bg-indigo-500/20 !text-indigo-300 font-semibold border border-indigo-500/30 shadow-xs"
+        class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap"
+      >
+        <span class="text-base w-5 text-center">🔑</span>
+        Usuários
+      </a>
+      <a
+        [routerLink]="['/admin', 'audit-log']"
+        routerLinkActive="!bg-indigo-500/20 !text-indigo-300 font-semibold border border-indigo-500/30 shadow-xs"
+        class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap"
+      >
+        <span class="text-base w-5 text-center">📋</span>
+        Audit Log
+      </a>
+    }
   </nav>
 
   <div class="p-4 border-t border-white/10 flex items-center justify-between gap-3 bg-[#0e0e24]">
