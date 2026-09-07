@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { Login } from './features/auth/login/login';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [Login],
-  template: `
-    <app-login />
-  `,
-  styles: []
+  imports: [RouterOutlet],
+  template: `<router-outlet />`,
+  styles: [],
 })
-export class App { }
+export class App {}
