@@ -1,71 +1,99 @@
 <aside
-  class="w-full h-full bg-[#0e0e24] border-b md:border-b-0 md:border-r border-white/10 flex flex-col justify-between shadow-2xl">
+  class="w-full h-full bg-[#0e0e24] border-b md:border-b-0 md:border-r border-white/10 flex flex-col justify-between shadow-2xl"
+>
   <div class="flex items-center justify-between p-5 md:p-6 border-b border-white/10">
     <div class="flex items-center gap-3">
       <div
-        class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+        class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/25"
+      >
         <span class="text-white font-bold text-lg leading-none">◆</span>
       </div>
       <span class="text-lg font-bold text-slate-100 tracking-tight">Gestão Pro</span>
     </div>
   </div>
 
-  <nav class="flex-1 flex flex-row md:flex-col gap-1.5 p-3 sm:p-4 overflow-x-auto md:overflow-y-auto">
+  <nav
+    class="flex-1 flex flex-row md:flex-col gap-1.5 p-3 sm:p-4 overflow-x-auto md:overflow-y-auto"
+  >
     <span
-      class="hidden md:block text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 pt-3 pb-1.5">Menu</span>
-    <a class="!bg-indigo-500/20 !text-indigo-300 font-semibold border border-indigo-500/30 shadow-xs"
-      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap">
+      class="hidden md:block text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 pt-3 pb-1.5"
+      >Menu</span
+    >
+    <a
+      [routerLink]="['/dashboard']"
+      class="!bg-indigo-500/20 !text-indigo-300 font-semibold border border-indigo-500/30 shadow-xs"
+      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap"
+    >
       <span class="text-base w-5 text-center">📊</span>
       Projetos
     </a>
     <a
-      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap">
+      [routerLink]="['/members']"
+      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap"
+    >
       <span class="text-base w-5 text-center">👥</span>
       Equipe
     </a>
 
     <span
-      class="hidden md:block text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 pt-5 pb-1.5">Configurações</span>
+      class="hidden md:block text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 pt-5 pb-1.5"
+      >Configurações</span
+    >
     <a
-      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap">
+      [routerLink]="['/settings', 'profile']"
+      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap"
+    >
       <span class="text-base w-5 text-center">👤</span>
       Perfil
     </a>
     <a
-      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap">
+      [routerLink]="['/settings', 'billings']"
+      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap"
+    >
       <span class="text-base w-5 text-center">💳</span>
       Faturamento
     </a>
 
-
     <span
-      class="hidden md:block text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 pt-5 pb-1.5">Admin</span>
+      class="hidden md:block text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 pt-5 pb-1.5"
+      >Admin</span
+    >
     <a
-      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap">
+      [routerLink]="['/admin', 'users']"
+      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap"
+    >
       <span class="text-base w-5 text-center">🔑</span>
       Usuários
     </a>
     <a
-      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap">
+      [routerLink]="['/admin', 'audit-log']"
+      class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 hover:text-slate-200 transition-all text-sm whitespace-nowrap"
+    >
       <span class="text-base w-5 text-center">📋</span>
       Audit Log
     </a>
-
   </nav>
 
   <div class="p-4 border-t border-white/10 flex items-center justify-between gap-3 bg-[#0e0e24]">
     <div class="flex items-center gap-3 min-w-0">
       <div
-        class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-xs font-bold text-white shrink-0 shadow-md">
-        {{ _authManager.user()?.name | initials }}</div>
+        class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-xs font-bold text-white shrink-0 shadow-md"
+      >
+        {{ _authManager.user()?.name | initials }}
+      </div>
       <div class="flex flex-col min-w-0 leading-tight">
-        <span class="text-sm font-semibold text-slate-200 truncate">{{ _authManager.user()?.name }}</span>
-        <span class="text-xs text-indigo-400 capitalize font-medium mt-0.5">{{ _authManager.user()?.role }}</span>
+        <span class="text-sm font-semibold text-slate-200 truncate">{{
+          _authManager.user()?.name
+        }}</span>
+        <span class="text-xs text-indigo-400 capitalize font-medium mt-0.5">{{
+          _authManager.user()?.role
+        }}</span>
       </div>
     </div>
     <button
       class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-red-500/15 border border-white/10 hover:border-red-500/40 text-slate-300 hover:text-red-400 transition-all text-xs font-medium shrink-0"
-      (click)="logout()">
+      (click)="logout()"
+    >
       Sair
     </button>
   </div>
