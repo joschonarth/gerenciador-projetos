@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { AuthManager } from '../../../core/services/auth-manager';
 import { InitialsPipe } from '../../pipes/initials-pipe';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [InitialsPipe, RouterLink],
+  imports: [InitialsPipe, RouterLink, RouterLinkActive],
   templateUrl: './sidebar.html',
 })
 export class Sidebar {
