@@ -1,14 +1,13 @@
 import { Component, inject, signal } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterLinkActive } from '@angular/router';
 import { IProject, ITask } from '../../../core/models';
 
 @Component({
   selector: 'app-backlog',
-  imports: [],
-  templateUrl: './backlog.html'
+  imports: [RouterLink, RouterLinkActive],
+  templateUrl: './backlog.html',
 })
 export class Backlog {
-
   project: IProject = {
     id: 'PRJ-101',
     name: 'Projeto Phoenix',
@@ -18,9 +17,9 @@ export class Backlog {
 
   getStatusLabel(status: string): string {
     const map: Record<string, string> = {
-      'todo': 'A Fazer',
-      'in_progress': 'Em Progresso',
-      'done': 'Concluído'
+      todo: 'A Fazer',
+      in_progress: 'Em Progresso',
+      done: 'Concluído',
     };
     return map[status] || status;
   }

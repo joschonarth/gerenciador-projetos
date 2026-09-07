@@ -1,11 +1,11 @@
 import { Component, inject, signal, computed } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { ProjectApi } from '../../../core/services/project-api';
 import { IProject, ITask } from '../../../core/models';
 
 @Component({
   selector: 'app-board',
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './board.html',
 })
 export class Board {
