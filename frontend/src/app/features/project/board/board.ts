@@ -27,5 +27,9 @@ export class Board {
     });
   }
 
-  openTask(taskId: string): void {}
+  openTask(taskId: string): void {
+    this._router.navigate([{ outlets: { detail: ['task', taskId] } }], {
+      relativeTo: this._activatedRoute.parent,
+    });
+  }
 }
