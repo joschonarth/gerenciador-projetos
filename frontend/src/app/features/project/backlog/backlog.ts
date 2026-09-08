@@ -8,12 +8,11 @@ import { IProject, ITask } from '../../../core/models';
   templateUrl: './backlog.html',
 })
 export class Backlog {
-  project: IProject = {
-    id: 'PRJ-101',
-    name: 'Projeto Phoenix',
-    description: 'Plataforma de gestão de projetos ágeis com IA',
-  };
-  tasks = signal<ITask[]>([]);
+  private readonly _activatedRoute = inject(ActivatedRoute);
+
+  project: IProject = this._activatedRoute.snapshot.data['project'];
+
+  tasks = signal<ITask[]>(this._activatedRoute.snapshot.data['tasks'] || []);
 
   getStatusLabel(status: string): string {
     const map: Record<string, string> = {
