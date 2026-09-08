@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { LoadingBar } from './shared/components/loading-bar/loading-bar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  template: `<router-outlet />`,
+  imports: [RouterOutlet, LoadingBar],
+  template: `
+    <app-loading-bar />
+    <router-outlet />
+  `,
   styles: [],
 })
 export class App {}
