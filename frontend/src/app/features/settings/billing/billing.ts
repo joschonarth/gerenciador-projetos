@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-billing',
-  imports: [],
-  templateUrl: './billing.html'
+  imports: [RouterLink, RouterLinkActive],
+  templateUrl: './billing.html',
 })
-export class Billing { }
+export class Billing {}
