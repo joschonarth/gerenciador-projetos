@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IProject } from '../../../core/models';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-project-settings',
@@ -8,9 +8,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './project-settings.html',
 })
 export class ProjectSettings {
-  project: IProject = {
-    id: 'PRJ-101',
-    name: 'Projeto Phoenix',
-    description: 'Plataforma de gestão de projetos ágeis com IA',
-  };
+  private readonly _activatedRoute = inject(ActivatedRoute);
+
+  project: IProject = this._activatedRoute.snapshot.data['project'];
 }
