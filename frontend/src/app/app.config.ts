@@ -3,7 +3,7 @@ import {
   provideBrowserGlobalErrorListeners,
   provideZonelessChangeDetection,
 } from '@angular/core';
-import { provideRouter, TitleStrategy, withPreloading } from '@angular/router';
+import { provideRouter, TitleStrategy, withPreloading, withViewTransitions } from '@angular/router';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 
 import { routes } from './app.routes';
@@ -16,7 +16,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideRouter(routes, withPreloading(CustomPreloadingStrategy)),
+    provideRouter(routes, withPreloading(CustomPreloadingStrategy), withViewTransitions()),
     provideHttpClient(withInterceptors([authInterceptor, errorInterceptor])),
     {
       provide: TitleStrategy,
