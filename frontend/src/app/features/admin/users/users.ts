@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { InitialsPipe } from '../../../shared/pipes/initials-pipe';
 import { IUser } from '../../../core/models';
+import { ActivatedRoute, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-users',
-  imports: [InitialsPipe],
-  templateUrl: './users.html'
+  imports: [InitialsPipe, RouterLink, RouterLinkActive],
+  templateUrl: './users.html',
 })
 export class Users {
-  users = signal<IUser[]>([]);
+  private readonly _activatedRoute = inject(ActivatedRoute);
+
+  users = signal<IUser[]>(this._activatedRoute.snapshot.data['users']);
 }

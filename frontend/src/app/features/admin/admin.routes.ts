@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { usersResolver } from '../../core/resolvers/users-resolver';
 
 export const ADMIN_ROUTES: Routes = [
   {
@@ -8,6 +9,7 @@ export const ADMIN_ROUTES: Routes = [
   },
   {
     path: 'users',
+    resolve: { users: usersResolver },
     loadComponent: () => import('./users/users').then((m) => m.Users),
     title: 'Usuários',
   },
