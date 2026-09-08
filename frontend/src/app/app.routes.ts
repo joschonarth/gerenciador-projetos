@@ -23,9 +23,11 @@ export const routes: Routes = [
         path: 'dashboard',
         loadComponent: () => import('./features/dashboard/dashboard').then((m) => m.Dashboard),
         title: 'Dashboard',
+        data: { preload: true },
       },
       {
         path: 'project/:projectId',
+        data: { preload: true },
         loadChildren: () =>
           import('./features/project/project.routes').then((m) => m.PROJECT_ROUTES),
       },
