@@ -11,8 +11,18 @@ describe('Auth Manager Service', () => {
     navigate: vi.fn(),
   };
 
+  const mockLocalStorage = {
+    getItem: vi.fn(),
+    setItem: vi.fn(),
+    removeItem: vi.fn(),
+    clear: vi.fn(),
+  }
+
   beforeEach(() => {
-    localStorage.clear();
+    Object.defineProperty(globalThis, 'localStorage', {
+      value: mockLocalStorage,
+      writable: true
+    })
 
     vi.clearAllMocks();
 
@@ -34,7 +44,7 @@ describe('Auth Manager Service', () => {
   });
 
   it('deve fazer o login, salvar os dados e disparar o tap() com sucesso', () => {
-    const setItemSpy = vi.spyOn(Storage.prototype, 'setItem');
+    const setItemSpy = vi.spyOn(globalThis.localStorage, 'setItem');
 
     service.login('admin@teste.com').subscribe((response) => {
       expect(response.token).toBe('meu_token_secreto');
@@ -65,7 +75,7 @@ describe('Auth Manager Service', () => {
   });
 
   it('deve abortar as lógicas do tap() se a API retornar erro HTTP 401', () => {
-    const setItemSpy = vi.spyOn(Storage.prototype, 'setItem');
+    const setItemSpy = vi.spyOn(globalThis.localStorage, 'setItem');
 
     service.login('invalido@teste.com').subscribe({
       error: (httpError: HttpErrorResponse) => {
