@@ -15,8 +15,8 @@ _Sistema de gestão de projetos e tarefas com autenticação, níveis de acesso,
 📃 [Sobre](#-sobre)&nbsp;&nbsp;•&nbsp;&nbsp;
 🛠️ [Tecnologias](#️-tecnologias)&nbsp;&nbsp;•&nbsp;&nbsp;
 ✨ [Funcionalidades](#-funcionalidades)&nbsp;&nbsp;•&nbsp;&nbsp;
-🧪 [Testes Unitários](#-testes-unitários)&nbsp;&nbsp;•&nbsp;&nbsp;
-🚀 [Como rodar](#-como-rodar)&nbsp;&nbsp;
+🚀 [Como rodar](#-como-rodar)&nbsp;&nbsp;•&nbsp;&nbsp;
+🧪 [Testes](#-testes)&nbsp;&nbsp;
 
 </div>
 
@@ -123,9 +123,9 @@ O projeto é dividido em duas pastas, `backend` e `frontend`, que devem ser exec
 
 ---
 
-## 🧪 Testes Unitários
+## 🧪 Testes
 
-O frontend possui uma suíte de testes unitários (`.spec.ts`) integrada nativamente ao Angular CLI através do builder `@angular/build:unit-test`, que utiliza o **Vitest** para execução dos testes.
+O frontend possui uma suíte de testes (`.spec.ts`) integrada nativamente ao Angular CLI através do builder `@angular/build:unit-test`, que utiliza o **Vitest** para execução dos testes.
 
 ### 📂 Escopo de testagem
 
