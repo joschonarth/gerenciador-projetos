@@ -6,9 +6,9 @@
 
 _Sistema de gestão de projetos e tarefas com autenticação, níveis de acesso, quadro Kanban, backlog e área administrativa com logs de auditoria._
 
-<img src="https://img.shields.io/github/last-commit/joschonarth/gerenciador-projetos?style=default&logo=git&logoColor=white&color=525252&labelColor=171717" alt="last-commit">
-<img src="https://img.shields.io/github/languages/top/joschonarth/gerenciador-projetos?style=default&color=525252&labelColor=171717" alt="repo-top-language">
-<img src="https://img.shields.io/github/languages/count/joschonarth/gerenciador-projetos?style=default&color=525252&labelColor=171717" alt="repo-language-count">
+<img src="https://img.shields.io/github/last-commit/joschonarth/gerenciador-projetos?style=default&logo=git&logoColor=white&color=6366f1&labelColor=27272a" alt="last-commit">
+<img src="https://img.shields.io/github/languages/top/joschonarth/gerenciador-projetos?style=default&color=6366f1&labelColor=27272a" alt="repo-top-language">
+<img src="https://img.shields.io/github/languages/count/joschonarth/gerenciador-projetos?style=default&color=6366f1&labelColor=27272a" alt="repo-language-count">
 
 ---
 
@@ -19,6 +19,10 @@ _Sistema de gestão de projetos e tarefas com autenticação, níveis de acesso,
 🚀 [Como rodar](#-como-rodar)&nbsp;&nbsp;
 
 </div>
+
+---
+
+<img width="1365" height="767" alt="board" src="https://github.com/user-attachments/assets/411b89f2-eb0a-47c4-bc13-fdf81b0a5869" />
 
 ---
 
